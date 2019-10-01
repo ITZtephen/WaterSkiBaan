@@ -19,6 +19,10 @@ namespace Waterskibaan
             }
 
             _kabel = new Kabel();
+
+            WachtrijInstructie wachtrijInstructie = new WachtrijInstructie();
+            InstructieGroep instructieGroep = new InstructieGroep();
+            WachtrijStarten wachtrijstarten = new WachtrijStarten();
         }
         public void VerplaatsKabel()
         {
@@ -42,6 +46,8 @@ namespace Waterskibaan
             {
                 throw new Exception("Je moet nog een skies pakken");
             }
+
+            
 
             if (!_kabel.IsStartPositieLeeg()) { return; }
             Random rand = new Random();
